@@ -37,7 +37,7 @@ window.addEventListener('keypress', (e) => {
 
         // Handle interaction with button that matches key that is pressed
         keyboardButtons.forEach((button) => {
-            if(button.textContent === e.key){
+            if(button.textContent === e.key && !button.disabled){
                 game.handleInteraction(button)
             }
         });
