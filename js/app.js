@@ -4,6 +4,7 @@ let game;
 const keyboardButtons = document.querySelectorAll('.key');
 const scoreboard = document.querySelector('#scoreboard ol');
 const newGameButton = document.querySelector('#btn__reset');
+const overlay = document.querySelector('#overlay');
 
 // newGame function to initialise a new game
 const newGame = () => {
@@ -26,15 +27,9 @@ keyboardButtons.forEach((button) => {
 
 // Add event listener for any keypress
 window.addEventListener('keypress', (e) => {
-    /* If key pressed is 'Enter' and game either hasn't started or has finished (won or lost),
-       start a new game 
-    */
-    if(e.key === 'Enter' && game === undefined || game.missed === 5 || game.checkForWin()){
-        newGame();
-    }    
     
-    // If game has been initialised
-    if(game !== undefined){
+    // Only handle keypress providing a new game has started
+    if(overlay.style.display === 'none'){
 
         // Handle interaction with button that matches key that is pressed
         keyboardButtons.forEach((button) => {

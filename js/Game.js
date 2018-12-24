@@ -66,7 +66,7 @@ class Game {
             * @param {boolean} gameWon - Whether or not the user won the game
         */
     gameOver(gameWon) {
-        const overlay = document.querySelector('#overlay');
+
         const message = document.querySelector('#game-over-message');
 
         if(gameWon){
