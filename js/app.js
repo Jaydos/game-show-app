@@ -3,6 +3,7 @@ let game;
 // Target and store all keyboard buttons and scoreboard list for later use
 const keyboardButtons = document.querySelectorAll('.key');
 const scoreboard = document.querySelector('#scoreboard ol');
+const newGameButton = document.querySelector('#btn__reset');
 
 // newGame function to initialise a new game
 const newGame = () => {
@@ -12,7 +13,7 @@ const newGame = () => {
 }
 
 // Start new game when start button is clicked
-document.querySelector('#btn__reset').addEventListener('click', () => {
+newGameButton.addEventListener('click', () => {
     newGame();
 });
 

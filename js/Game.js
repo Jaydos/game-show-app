@@ -77,6 +77,7 @@ class Game {
             overlay.className = 'lose';
         }
 
+        newGameButton.textContent = 'Play Again?';
         overlay.style.display = '';
     };
 
